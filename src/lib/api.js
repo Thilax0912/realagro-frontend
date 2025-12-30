@@ -3,7 +3,8 @@
 export const API_BASE =
   process.env.REACT_APP_API_URL ||
   process.env.REACT_APP_API_BASE ||
-  "http://localhost:4000";
+  "https://realagro-backend.onrender.com
+";
 
 // token helper (supports both "auth_demo" and "token")
 function getToken() {
