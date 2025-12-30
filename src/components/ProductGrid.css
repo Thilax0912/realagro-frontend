@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap');
+
+/* Grid Section */
+.grid-wrap {
+  padding: 70px 20px;
+  text-align: center;
+  background: #fff;
+}
+
+/* Heading container */
+.product-header {
+  margin-bottom: 40px;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* Orange gradient heading */
+.product-heading {
+  font-family: "Playfair Display", serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #ff8c00, #f5a623);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+/* Decorative underline */
+.heading-line {
+  width: 90px;
+  height: 4px;
+  background: linear-gradient(90deg, #ff7b00, #f5a623);
+  margin: 0 auto 12px;
+  border-radius: 10px;
+}
+
+/* Tagline text */
+.product-sub {
+  font-family: "Poppins", sans-serif;
+  color: #555;
+  font-size: 1rem;
+  max-width: 650px;
+  margin: 0 auto;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Reveal on scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity .6s ease, transform .6s ease;
+  will-change: opacity, transform;
+}
+
+.reveal--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Optional: subtler entrance for cards */
+.reveal-card {
+  transition-duration: .55s;
+}

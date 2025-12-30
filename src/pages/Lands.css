@@ -1,0 +1,497 @@
+/* ========= PAGE ========= */
+.landsX{
+  background:#f6faf7;
+  color:#0f172a;
+}
+
+/* ========= HERO ========= */
+.landsX-hero{
+  position:relative;
+  padding: 36px 0 26px;
+  overflow:hidden;
+}
+.landsX-heroBg{
+  position:absolute;
+  inset:-60px;
+  background:
+    radial-gradient(1100px 520px at 20% 20%, rgba(34,197,94,.35), transparent 60%),
+    radial-gradient(900px 420px at 80% 10%, rgba(16,185,129,.22), transparent 60%),
+    linear-gradient(180deg, #0b1220 0%, #0f172a 45%, #0b1220 100%);
+}
+.landsX-heroGlow{
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,0)),
+    radial-gradient(800px 420px at 30% 20%, rgba(255,255,255,.10), transparent 60%);
+  opacity:.9;
+  pointer-events:none;
+}
+
+.landsX-wrap{
+  position:relative;
+  z-index:2;
+  width:min(1200px, calc(100% - 48px));
+  margin: 0 auto;
+  display:grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap:18px;
+  align-items:stretch;
+}
+@media (max-width: 980px){
+  .landsX-wrap{ grid-template-columns:1fr; width:calc(100% - 28px); }
+}
+
+.landsX-heroContent{
+  border-radius: 22px;
+  padding: 26px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.10);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 30px 90px rgba(0,0,0,.30);
+}
+
+.landsX-pill{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:10px 14px;
+  border-radius:999px;
+  background: rgba(255,255,255,.10);
+  border: 1px solid rgba(255,255,255,.14);
+  color: rgba(255,255,255,.92);
+  font-weight: 900;
+  letter-spacing:.2px;
+}
+.landsX-dot{
+  width:10px;height:10px;border-radius:999px;
+  background:#22c55e;
+  box-shadow: 0 0 0 7px rgba(34,197,94,.16);
+}
+.landsX-ping{
+  width:8px;height:8px;border-radius:999px;
+  background:#22c55e;
+  margin-left:6px;
+  animation: lxPing 1.7s infinite;
+}
+@keyframes lxPing{
+  0%{ transform:scale(1); opacity:.9; }
+  70%{ transform:scale(2.4); opacity:0; }
+  100%{ opacity:0; }
+}
+
+.landsX-title{
+  margin: 14px 0 10px;
+  font-size: 50px;
+  line-height: 1.03;
+  letter-spacing:-1.5px;
+  font-weight: 1000;
+  color:#fff;
+  text-shadow: 0 18px 40px rgba(0,0,0,.35);
+}
+.landsX-title span{ color:#22c55e; }
+@media (max-width: 520px){ .landsX-title{ font-size: 36px; } }
+
+.landsX-sub{
+  margin: 0 0 14px;
+  max-width: 720px;
+  color: rgba(255,255,255,.82);
+  font-weight: 700;
+  line-height: 1.75;
+}
+
+/* stats */
+.landsX-stats{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin: 12px 0 16px;
+}
+.landsX-stat{
+  border-radius:18px;
+  padding: 12px 14px;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.12);
+  backdrop-filter: blur(10px);
+  min-width: 140px;
+}
+.landsX-stat .n{ font-weight:1000; font-size:20px; color:#fff; }
+.landsX-stat .t{ margin-top:2px; font-weight:800; font-size:12px; color: rgba(255,255,255,.75); }
+
+/* search card */
+.landsX-searchCard{
+  margin-top: 10px;
+  border-radius: 22px;
+  padding: 14px;
+  background: rgba(255,255,255,.92);
+  border: 1px solid rgba(255,255,255,.28);
+  box-shadow: 0 26px 70px rgba(0,0,0,.25);
+}
+.landsX-searchTop{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:space-between;
+}
+.landsX-input{
+  flex: 1;
+  min-width: 240px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding: 12px 12px;
+  border-radius: 18px;
+  background:#fff;
+  border: 1px solid rgba(2,6,23,.10);
+}
+.landsX-input .ic{ opacity:.8; }
+.landsX-input input{
+  width:100%;
+  border:0;
+  outline:none;
+  background:transparent;
+  font-weight: 900;
+  color:#0f172a;
+}
+.landsX-input input::placeholder{ color: rgba(15,23,42,.55); font-weight:800; }
+
+.landsX-tabs{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+.landsX-tab{
+  border-radius:999px;
+  padding: 10px 12px;
+  border: 1px solid rgba(2,6,23,.10);
+  background: rgba(2,6,23,.03);
+  font-weight: 950;
+  cursor:pointer;
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  transition: transform .14s ease, box-shadow .14s ease, background .14s ease;
+}
+.landsX-tab:hover{ transform: translateY(-1px); box-shadow: 0 14px 30px rgba(2,6,23,.10); }
+.landsX-tab.isActive{
+  background: rgba(34,197,94,.12);
+  border-color: rgba(34,197,94,.35);
+}
+.landsX-count{
+  padding: 4px 10px;
+  border-radius:999px;
+  background: rgba(15,23,42,.06);
+  font-size: 12px;
+}
+
+/* trust row */
+.landsX-trustRow{
+  margin-top: 12px;
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:space-between;
+}
+.landsX-trust{
+  padding: 10px 12px;
+  border-radius: 16px;
+  background: rgba(34,197,94,.10);
+  border: 1px solid rgba(34,197,94,.20);
+  font-weight: 900;
+  color: rgba(15,23,42,.92);
+}
+.landsX-ctaBtn{
+  margin-left:auto;
+  text-decoration:none;
+  border-radius: 16px;
+  padding: 12px 14px;
+  font-weight: 1000;
+  color:#fff;
+  background: linear-gradient(135deg,#22c55e,#16a34a);
+  box-shadow: 0 16px 40px rgba(34,197,94,.25);
+  transition: transform .14s ease, box-shadow .14s ease;
+}
+.landsX-ctaBtn:hover{ transform: translateY(-2px); box-shadow: 0 20px 52px rgba(34,197,94,.35); }
+
+/* side card */
+.landsX-sideCard{
+  border-radius: 22px;
+  padding: 22px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.10);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 30px 90px rgba(0,0,0,.30);
+  color:#fff;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+.landsX-sideBadge{
+  display:inline-flex;
+  width:max-content;
+  padding:8px 12px;
+  border-radius:999px;
+  background: rgba(34,197,94,.16);
+  border: 1px solid rgba(34,197,94,.28);
+  font-weight: 1000;
+}
+.landsX-sideTitle{ font-weight:1000; font-size:20px; margin-top:4px; }
+.landsX-sideSub{ color: rgba(255,255,255,.78); font-weight:750; line-height:1.7; }
+
+.landsX-sideKpis{
+  display:grid;
+  grid-template-columns: repeat(3,1fr);
+  gap:10px;
+}
+.kpi{
+  border-radius: 18px;
+  padding: 12px;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.12);
+}
+.kpi .k{ font-weight:1000; }
+.kpi .v{ margin-top:2px; font-weight:850; font-size:12px; color: rgba(255,255,255,.72); }
+
+.landsX-sideBtn{
+  margin-top:auto;
+  text-decoration:none;
+  border-radius: 16px;
+  padding: 12px 14px;
+  font-weight: 1000;
+  color:#0f172a;
+  background: rgba(255,255,255,.92);
+  border: 1px solid rgba(255,255,255,.26);
+  text-align:center;
+}
+
+/* ========= LIST SECTION ========= */
+.landsX-section{
+  width:min(1200px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 34px 0 70px;
+}
+@media (max-width: 980px){ .landsX-section{ width:calc(100% - 28px); } }
+
+.landsX-head{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-bottom: 16px;
+}
+.landsX-h2{
+  margin:0 0 6px;
+  font-size: 30px;
+  font-weight: 1000;
+  letter-spacing:-.6px;
+}
+.landsX-desc{
+  margin:0;
+  font-weight:800;
+  color: rgba(15,23,42,.65);
+}
+.landsX-miniInfo{
+  padding: 10px 12px;
+  border-radius: 16px;
+  background:#fff;
+  border: 1px solid rgba(2,6,23,.08);
+  box-shadow: 0 16px 40px rgba(2,6,23,.06);
+  font-weight:900;
+}
+
+/* cards */
+.landsX-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 18px;
+}
+.landsX-card{
+  border-radius: 22px;
+  overflow:hidden;
+  background:#fff;
+  border: 1px solid rgba(2,6,23,.08);
+  box-shadow: 0 18px 55px rgba(2,6,23,.08);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.landsX-card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 30px 80px rgba(2,6,23,.12);
+}
+
+.landsX-imgWrap{ position:relative; }
+.landsX-imgWrap img{
+  width:100%;
+  height: 230px;
+  object-fit:cover;
+  display:block;
+  transform: scale(1.02);
+}
+.landsX-imgOverlay{
+  position:absolute; inset:0;
+  background: linear-gradient(180deg, rgba(15,23,42,.10), rgba(15,23,42,.45));
+}
+.landsX-badge{
+  position:absolute;
+  top:14px; left:14px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 1000;
+  color:#fff;
+  border: 1px solid rgba(255,255,255,.18);
+  backdrop-filter: blur(10px);
+}
+.landsX-badge.available{ background: rgba(34,197,94,.90); }
+.landsX-badge.sold{ background: rgba(239,68,68,.92); }
+
+.landsX-code{
+  position:absolute;
+  top:14px; right:14px;
+  padding: 8px 10px;
+  border-radius: 14px;
+  background: rgba(255,255,255,.90);
+  font-weight: 1000;
+}
+
+.landsX-body{ padding: 16px; }
+.landsX-nameRow{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+}
+.landsX-name{
+  margin:0;
+  font-size: 18px;
+  font-weight: 1000;
+}
+.landsX-verified{
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 1000;
+  font-size: 12px;
+  color:#16a34a;
+  background: rgba(22,163,74,.12);
+  border: 1px solid rgba(22,163,74,.22);
+}
+.landsX-loc{
+  margin: 8px 0 12px;
+  color: rgba(15,23,42,.70);
+  font-weight: 800;
+}
+
+.landsX-meta{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.mBox{
+  border-radius: 18px;
+  padding: 12px;
+  background: rgba(2,6,23,.03);
+  border: 1px solid rgba(2,6,23,.06);
+}
+.mLbl{
+  font-size: 12px;
+  font-weight: 900;
+  color: rgba(15,23,42,.60);
+}
+.mVal{
+  margin-top:4px;
+  font-weight: 1000;
+}
+.mVal.price{ color:#16a34a; }
+
+/* buttons */
+.landsX-actions{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.landsX-btn{
+  border:0;
+  border-radius: 16px;
+  padding: 12px 12px;
+  font-weight: 1000;
+  cursor:pointer;
+  text-decoration:none;
+  text-align:center;
+  transition: transform .14s ease, box-shadow .14s ease, background .14s ease;
+}
+.landsX-btn.primary{
+  color:#fff;
+  background: linear-gradient(135deg,#22c55e,#16a34a);
+  box-shadow: 0 16px 40px rgba(34,197,94,.22);
+}
+.landsX-btn.primary:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 22px 56px rgba(34,197,94,.32);
+}
+.landsX-btn.ghost{
+  background: rgba(2,6,23,.04);
+  border: 1px solid rgba(2,6,23,.08);
+  color:#0f172a;
+}
+
+/* footer CTA */
+.landsX-footerCta{
+  padding: 60px 0 78px;
+  background:
+    radial-gradient(900px 360px at 20% 40%, rgba(34,197,94,.18), transparent 60%),
+    linear-gradient(135deg, #0f172a, #111827);
+  color:#fff;
+}
+.landsX-footerInner{
+  width:min(1200px, calc(100% - 48px));
+  margin: 0 auto;
+  border-radius: 26px;
+  padding: 22px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.14);
+  backdrop-filter: blur(10px);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+}
+@media (max-width: 980px){
+  .landsX-footerInner{ width:calc(100% - 28px); flex-direction:column; align-items:flex-start; }
+}
+.landsX-footerInner h3{ margin:0; font-weight:1000; }
+.landsX-footerInner p{ margin:6px 0 0; font-weight:850; color: rgba(255,255,255,.82); }
+.landsX-btn.big{ padding: 14px 16px; }
+
+/* ===== SOLD OUT GHOST EFFECT (no other UI changes) ===== */
+.landsX-card.isSold {
+  opacity: 0.72;
+  filter: grayscale(1);
+}
+
+.landsX-card.isSold .landsX-imgOverlay {
+  background: linear-gradient(180deg, rgba(15,23,42,.25), rgba(15,23,42,.72));
+}
+
+.landsX-card.isSold .landsX-body {
+  background: #f3f4f6; /* light grey */
+}
+
+.landsX-card.isSold .mBox {
+  background: rgba(15, 23, 42, 0.03);
+  border-color: rgba(15, 23, 42, 0.08);
+}
+
+.landsX-card.isSold .landsX-btn.primary {
+  background: rgba(15, 23, 42, 0.08);
+  color: rgba(15, 23, 42, 0.55);
+  box-shadow: none;
+  pointer-events: none; /* optional: disable contact button */
+}
+
+.landsX-card.isSold .landsX-btn.ghost {
+  background: rgba(15, 23, 42, 0.04);
+  border-color: rgba(15, 23, 42, 0.10);
+}
