@@ -1,4 +1,4 @@
-// src/lib/api.js
+
 
 // src/lib/api.js
 
@@ -6,6 +6,7 @@ export const API_BASE =
   process.env.REACT_APP_API_URL ||
   process.env.REACT_APP_API_BASE ||
   "https://realagro-backend.onrender.com";
+
 
 
 // token helper (supports both "auth_demo" and "token")
