@@ -42,8 +42,9 @@
   border-radius: 18px;
   overflow: hidden;
   /* 🔹 Combine image + gradient */
-  background: 
-    url("/Users/thilaxshan/Downloads/LAND.jpg"); /* 👈 image path (public folder) */
+ background: 
+  url("./assets/LAND.jpg");
+ /* 👈 image path (public folder) */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
